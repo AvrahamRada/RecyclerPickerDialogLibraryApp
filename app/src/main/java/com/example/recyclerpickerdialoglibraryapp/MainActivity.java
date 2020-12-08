@@ -8,7 +8,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 
-import com.example.recyclerpickerdialoglibrary.myRecycle.MyOwnCustomDialog;
+import com.example.recyclerpickerdialoglibrary.MyOwnCustomDialog;
 import com.google.android.material.button.MaterialButton;
 
 import java.util.ArrayList;

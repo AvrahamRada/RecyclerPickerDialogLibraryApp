@@ -1,4 +1,4 @@
-package com.example.recyclerpickerdialoglibrary.myRecycle;
+package com.example.recyclerpickerdialoglibrary;
 
 import android.app.Activity;
 import android.app.Dialog;
