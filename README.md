@@ -16,5 +16,5 @@ Step 2. Add the dependency:
 
 ```
 dependencies {
-      implementation 'com.github.AvrahamRada:RecyclerPickerDialogLibraryApp:1.00.01'
+      implementation 'com.github.AvrahamRada:RecyclerPickerDialogLibraryApp:1.00.02'
 }
