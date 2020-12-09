@@ -21,6 +21,7 @@ dependencies {
 
 ## Usage
 ![](assets/yellow.gif)
+![](assets/green.gif)
 
 
 To display fully customizable toast, you can set the CustomToast attributes as you wish:
