@@ -33,7 +33,7 @@ dependencies {
 ```
 ## Usage
 
-![](assets/green.gif)![](assets/yellow.gif)![](assets/blue.gif)
+![](assets/green.gif)      ![](assets/yellow.gif)      ![](assets/blue.gif)
 
 :green_heart: To display green dialog with checkBox:
 ```java                    
