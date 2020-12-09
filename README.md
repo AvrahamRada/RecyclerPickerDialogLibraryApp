@@ -2,7 +2,17 @@
 
 [![](https://jitpack.io/v/AvrahamRada/RecyclerPickerDialogLibraryApp.svg)](https://jitpack.io/#AvrahamRada/RecyclerPickerDialogLibraryApp)
 
-## Setup
+## Description:
+```
+My library create a dynamic dialog frame to the user.
+the user just need to forward those information to the library:
+ 1. user's new title.
+ 2. type of dialog frame (0 - CheckBox, 1 - Radio Button and 2- switch)
+ 3. user's data (as array/list of strings).
+ 4. user's prefered color. 
+```
+
+## Setup:
 Step 1. Add it in your root build.gradle at the end of repositories:
 ```
 allprojects {
@@ -22,79 +32,17 @@ dependencies {
 
 ```
 ## Usage
-![](assets/yellow.gif)
-![](assets/green.gif)
 
+![](assets/green.gif)   ![](assets/yellow.gif)   ![](assets/blue.gif)
 
-To display fully customizable toast, you can set the CustomToast attributes as you wish:
+To display green dialog with checkBox:
 ```java                    
 
-CustomToast.init()
-           .setContext(this)
-           .setMessage("Enter your message here")
-           .setDuration(CustomToast.LENGTH_SHORT)
-           .setBackgroundColor(Color.BLUE)
-           .setCornerRadius(50)
-           .setTextColor(Color.WHITE)
-           .setTextSize(17)
-           .setRightIcon(getResources().getDrawable(R.drawable.ic_android))
-           .setLeftIcon(getResources().getDrawable(R.drawable.ic_android))
-           .buildToast()
-           .show();
-To display fully customizable blinking toast, you can set the blinking attributes as you wish:
-```java                    
+String[] userData = {"Option -1-", "Option -2-", "Option -3-", "Option -4-", "Option -5-"};
+MyOwnCustomDialog myFragment = new MyOwnCustomDialog("User Title", 0, userData, Color.argb(255, 153, 201, 99));
+myFragment.show(getSupportFragmentManager(), "User TAG");
 
-CustomToast.init()
-           .setContext(this)
-           .setMessage("Enter your message here")
-           .setDuration(CustomToast.LENGTH_SHORT)
-           .setBackgroundColor(Color.BLUE)
-           .setCornerRadius(50)
-           .setTextColor(Color.WHITE)
-           .setTextSize(17)
-           .setRightIcon(getResources().getDrawable(R.drawable.ic_android))
-           .setLeftIcon(getResources().getDrawable(R.drawable.ic_android))
-	   .setBackgroundBlink(Color.CYAN, 300)
-           .setTextBlink(Color.RED, 200)
-           .setIconBlink(Color.WHITE, Color.BLACK, 200)
-	   .buildToast()
-           .show();
 ```
-
-To display built in custom toasts:
-
-Positive Toast:
-```java                    
-
-CustomToast.init()
-	   .positiveToast(this, "This is positive toast!", CustomToast.LENGTH_SHORT, CustomToast.LEFT_IMAGE)
-	   .show();
-```
-
-Negative Toast:
-```java                    
-
-CustomToast.init()
-	   .negativeToast(this, "This is negative toast!", CustomToast.LENGTH_SHORT, CustomToast.LEFT_IMAGE)
-	   .show();
-```
-
-Like Toast:
-```java                    
-
-CustomToast.init()
-	   .likeToast(this, "This is like toast!", CustomToast.LENGTH_SHORT, CustomToast.LEFT_IMAGE)
-	   .show();
-```
-
-Smile Toast:
-```java                    
-
-CustomToast.init()
-	   .smileToast(this, "This is smile toast!", CustomToast.LENGTH_SHORT, CustomToast.LEFT_IMAGE)
-	   .show();
-```
-
 ## License
 
     Copyright 2020 Alon Lubinski
