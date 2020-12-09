@@ -69,8 +69,8 @@ In order to get the answers/options when we click on 'SAVE' in the dialog, you n
 
 1. your class need to implements DialogInterface.OnDismissListener.
 2. to add this method:
-          
-          ```java 
+
+```java 
               @Override
               public void onDismiss(DialogInterface dialog) {
                    ArrayList<Integer> answers = myFragment.getMyAdapter().getYourAnswers();
@@ -81,8 +81,7 @@ In order to get the answers/options when we click on 'SAVE' in the dialog, you n
                          Log.d("pttt", "" + myFragment.getMyAdapter().getListOfData().get(answer));
                     }
                }
-
-          ```
+```
           
 ## License
 
