@@ -20,7 +20,8 @@ dependencies {
 }
 
 ## Usage
-![yellow](https://user-images.githubusercontent.com/57419411/101618405-9e0aca00-3a1a-11eb-89ac-8dd6a383a581.gif)
+![](assets/yellow.gif)
+
 
 To display fully customizable toast, you can set the CustomToast attributes as you wish:
 ```java                    
