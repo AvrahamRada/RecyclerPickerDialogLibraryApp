@@ -19,6 +19,8 @@ dependencies {
       implementation 'com.github.AvrahamRada:RecyclerPickerDialogLibraryApp:1.00.02'
 }
 
+
+```
 ## Usage
 ![](assets/yellow.gif)
 ![](assets/green.gif)
@@ -39,7 +41,6 @@ CustomToast.init()
            .setLeftIcon(getResources().getDrawable(R.drawable.ic_android))
            .buildToast()
            .show();
-```
 To display fully customizable blinking toast, you can set the blinking attributes as you wish:
 ```java                    
 
