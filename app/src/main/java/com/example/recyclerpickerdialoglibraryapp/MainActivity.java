@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity implements DialogInterface.O
         main_BTN_option1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                myFragment = new MyOwnCustomDialog("Question number 1", 0, data, Color.argb(255,243,160,154));
+                myFragment = new MyOwnCustomDialog("Question number 1", 0, data, Color.argb(255,124,181,189));
                 myFragment.show(getSupportFragmentManager(), "Avraham Rada");
             }
         });
