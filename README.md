@@ -33,19 +33,60 @@ dependencies {
 ```
 ## Usage
 
-![](assets/green.gif)   ![](assets/yellow.gif)   ![](assets/blue.gif)
+![](assets/green.gif) ![](assets/yellow.gif) ![](assets/blue.gif)
 
-To display green dialog with checkBox:
+:green_heart: To display green dialog with checkBox:
 ```java                    
 
-String[] userData = {"Option -1-", "Option -2-", "Option -3-", "Option -4-", "Option -5-"};
+String[] userData = {"Option -1-", "Option -2-", "Option -3-", "Option -4-", "Option -5-"}; // User data to display
+
 MyOwnCustomDialog myFragment = new MyOwnCustomDialog("User Title", 0, userData, Color.argb(255, 153, 201, 99));
 myFragment.show(getSupportFragmentManager(), "User TAG");
 
 ```
+
+:yellow_heart: To display yellow dialog with RadioBtn:
+```java                    
+
+String[] userData = {"Option -1-", "Option -2-", "Option -3-", "Option -4-", "Option -5-"}; // User data to display
+
+MyOwnCustomDialog myFragment = new MyOwnCustomDialog("User Title", 1, userData, Color.argb(255, 248, 229, 74));
+myFragment.show(getSupportFragmentManager(), "User TAG");
+
+```
+
+:blue_heart: To display blue dialog with switch:
+```java                    
+
+String[] userData = {"Option -1-", "Option -2-", "Option -3-", "Option -4-", "Option -5-"}; // User data to display
+
+MyOwnCustomDialog myFragment = new MyOwnCustomDialog("User Title", 2, userData, Color.argb(255, 124, 181, 189));
+myFragment.show(getSupportFragmentManager(), "User TAG");
+
+```
+
+In order to get the answers/options when we click on 'SAVE' in the dialog, you need to add this to your code:
+
+1. your class need to implements DialogInterface.OnDismissListener.
+2. to add this method:
+          
+          ```java 
+              @Override
+              public void onDismiss(DialogInterface dialog) {
+                   ArrayList<Integer> answers = myFragment.getMyAdapter().getYourAnswers();
+                   Collections.sort(answers);
+
+                   for (Integer answer : answers) {
+                         Log.d("pttt", "answer #" + (answer + 1));
+                         Log.d("pttt", "" + myFragment.getMyAdapter().getListOfData().get(answer));
+                    }
+               }
+
+          ```
+          
 ## License
 
-    Copyright 2020 Alon Lubinski
+    Copyright 2020 Avraham Rada
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
